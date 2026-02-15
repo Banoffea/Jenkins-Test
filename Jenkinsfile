@@ -9,17 +9,17 @@ pipeline {
           }
           stage('Build') {
                steps {
-                    bat 'javac shape/*.java'
+                    sh 'javac shape/*.java'
                }
           }
           stage('Test') {
                steps {
-                    bat 'java shape.RectangleTest'
+                    sh 'java shape.RectangleTest'
                }
           }
           stage('Deploy') {
                steps {
-                    bat 'java shape.RectangleMain'
+                    sh 'java shape.RectangleMain'
                }
           }
      }
